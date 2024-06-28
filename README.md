@@ -1,2 +1,2 @@
 # Living-planet
-cloud solution for en anvironmentally friendly company named Living Planet
+cloud solution for an environmentally friendly company named Living Planet
