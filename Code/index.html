@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Living Planet</title>
+    <!---Link to CSS stylesheet-->
+    <link rel="stylesheet" type="text/css" href="/css/Living_planet.css">
+    <!-- Linking the map.js and hide.js file -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="script/hide.js"></script>
+    <script src="script/map.js"></script>
+    <!---Loads up Google Maps Javascript API-->
+    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB236Ij8_Ziutl99aTknCr7WwA-ay3EXdM&loading=async&callback=initMap&libraries=maps,marker"></script>
+</head>
+
+<body>
+    <!-- Nav bar -->
+    <nav>
+        <header>
+            <h1><a href="/index.html">Living Planet</a></h1>
+        </header>
+        <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/webpages/about.html">About</a></li>
+            <li><a href="/Login.php">OAuth</a></li>
+        </ul>
+    </nav>
+
+    <div class="welcome-header">
+        <h1>Welcome to Living Planet</h1>
+    </div>
+
+    <!-- Toggleable air quality button which shows air quality guide -->
+    <div class="air-button-container">
+        <button id="airToggle">Air Quality</button>
+        <div class="air-container">
+            <h2 class="air">Air Quality Index (AQI)</h2>
+            <p>
+                <img src="http://maps.google.com/mapfiles/ms/icons/green-dot.png" alt="Green dot"> = good (1)
+                <br>
+                <img src="http://maps.google.com/mapfiles/ms/icons/yellow-dot.png" alt="Yellow dot"> = moderate (2)
+                <br>
+                <img src="http://maps.google.com/mapfiles/ms/icons/orange-dot.png" alt="Orange dot">=unhealthy for sensitive groups(3)
+                <br>
+                <img src="http://maps.google.com/mapfiles/ms/icons/red-dot.png" alt="Red dot"> = unhealthy (4)
+                <br>
+                <img src="http://maps.google.com/mapfiles/ms/icons/purple-dot.png" alt="Purple dot"> = very unhealthy (5)
+                <br>
+                <img src="http://maps.google.com/mapfiles/ms/icons/blue-dot.png" alt="Blue dot"> = N/A
+            </p>
+        </div>
+    </div>
+
+     <!-- Displaying the weather and air quality info -->
+     <main>
+        <section>
+            <div class="box-container">
+                <div class="weather-container">
+                    <h2 class="active">Weather</h2>
+                    <p>
+                        Location: <span id="location" style="font-weight: bold;"></span>
+                        <br>
+                        Weather: <span id="weather" style="font-weight: bold;"></span>
+                        <br>
+                        Weather Description: <span id="weatherdesc" style="font-weight: bold;"></span>
+                        <br>
+                        Temperature: <span id="temperature" style="font-weight: bold;"></span>°C
+                        <br>
+                        Feels Like: <span id="feels_like" style="font-weight: bold;"></span>°C
+                        <br>
+                        Humidity: <span id="humidity" style="font-weight: bold;"></span>%
+                        <br>
+                        Wind Speed: <span id="speed" style="font-weight: bold;"></span>km/h
+                        <br>
+                    </p>
+                </div>
+                <div class="aqi-container">
+                    <h2 class="active">Air Quality</h2>
+                    <p>
+                        Air Quality: <span id="aqi" style="font-weight: bold;"></span>
+                        <br>
+                        Carbon Monoxide: <span id="co" style="font-weight: bold;"></span>µg/m³
+                        <br>
+                        Nitrogen Monoxide: <span id="no" style="font-weight: bold;"></span>µg/m³
+                        <br>
+                        Ozone: <span id="o3" style="font-weight: bold;"></span>µg/m³
+                        <br>
+                        Sulphur Dioxide: <span id="so2" style="font-weight: bold;"></span>µg/m³
+                        <br>
+                        PM2.5: <span id="pm2_5" style="font-weight: bold;"></span>µg/m³
+                        <br>
+                        PM10: <span id="pm10" style="font-weight: bold;"></span>µg/m³
+                        <br>
+                        NH3: <span id="nh3" style="font-weight: bold;"></span>µg/m³
+                        <br>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sets up map and directions -->
+        <div id="map"></div>
+        <div id="directions"></div>
+    </main>
+
+    <!-- Footer section -->
+    <footer>
+        <p>&copy; 2024 Living Planet, all rights have been reserved by us</p>
+    </footer>
+</body>
+
+</html>

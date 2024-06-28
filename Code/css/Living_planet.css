@@ -1,0 +1,278 @@
+
+body {
+    margin: 0; 
+    padding: 0; 
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #dcf8f8ef; 
+}
+
+nav {
+    background-color: #2c3e50;
+    color: white;
+    padding: 1rem 0;
+    width: 100%; 
+    margin: 0 auto;
+}
+
+nav header h1 {
+    text-align: center;
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+nav header h1 a {
+    color: white;
+    text-decoration: none;
+}
+
+/* air quality and weather box */
+.box-container {
+    display: flex;
+    justify-content: space-around;  
+    align-items: flex-start;      
+    min-height: 10vh;
+    gap: 500px;  
+}
+
+.weather-container, .aqi-container {
+    text-align: center;
+    width: 300px;
+    background-color: white; 
+    padding: 10px; 
+    margin: 10px 0; 
+    border: 1px solid #ccc; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1), 0 0 15px rgba(0,0,0,0.1); 
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #34495e;
+    color: #ecf0f1;
+    border-radius: 4px;
+}
+
+main {
+    flex: 1;
+    max-width: 90%; 
+    margin: 0 auto;
+}
+
+.accordion {
+    max-width: 100%;
+    border-bottom: 1px solid #c4c4c4;
+}
+
+#map {
+    width: 100%;
+    height: 600px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 0 15px rgba(0, 0, 0, 0.1); 
+    border-radius: 8px; 
+    border: 1px solid #000000; 
+    overflow: hidden; 
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    .box-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .weather-container, .aqi-container {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+/* footer */
+footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 8rem;
+    width: 100%; 
+    position: relative;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.875rem;
+}
+
+.welcome-header {
+    text-align: center;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    display: inline-block;
+}
+
+
+/* Sign out button */
+.sign-out-container {
+    position: absolute;
+    top: 25px;
+    right: 110px;
+}
+
+.sign-out-container form {
+    display: inline-block;
+}
+
+.sign-out-container input[type="submit"] {
+    background-color: #ad3956;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 8px;
+}
+
+.sign-out-container input[type="submit"]:hover {
+    background-color: #6a28a0c4;
+    color: #ecf0f1;
+}
+
+/* air quality button */
+.air-button-container {
+    position: absolute;
+    top: 25px; 
+    right: 110px;
+    width: 300px;
+    text-align: right;
+}
+
+.air-button-container button {
+    background-color: #ad3956;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    width: 50%; 
+    text-align: center;
+    border-radius: 8px;
+}
+
+.air-button-container button:hover {
+    background-color: #6a28a0c4;
+    color: #ecf0f1;
+    border-radius: 8px;
+}
+
+.air-container {
+    background-color: white;
+    padding: 10px;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1), 0 0 15px rgba(0,0,0,0.1);
+    display: none; 
+    z-index: 1000; 
+    margin-top: 10px;
+    border-radius: 8px;
+}
+
+.air-container h2.air {
+    margin-top: 0;
+}
+
+/* credits.html css */
+.header-container h1 {
+    text-align: center;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 20px;
+    display: inline-block;
+    width: 100%;
+}
+
+.dev-header, .tools-header, .resources-header, .api-header, .resources-header {
+    text-align: center;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 20px;
+    display: inline-block;
+    width: 100%;
+    border-radius: 6px;
+}
+
+.modal {
+    position: absolute;
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #000;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 20px;
+}
+
+.modal-text {
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.modal-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    margin-right: 10px;
+}
+
+.modal-button.driving {
+    background-color: #4CAF50;
+}
+
+.modal-button.walking {
+    background-color: #008CBA;
+}
+
+.modal-button.cycling {
+    background-color: #f44336;
+}
+
+.modal-button:last-child {
+    margin-right: 0;
+}
